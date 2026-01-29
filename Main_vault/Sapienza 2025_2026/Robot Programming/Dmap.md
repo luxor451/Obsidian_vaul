@@ -221,3 +221,91 @@ std::vector<Point> computePath(Point start, Point goal, const DMap& dmap) {
     return {}; // No path found
 }
 ```
+
+---
+# Distance Map Localization (Scan Matching)
+
+
+## 1. Problem Formulation
+
+Localization can be framed as an optimization problem where we want to find the robot pose $X$ that aligns the current sensor readings with the map.
+
+Using a **Distance Map (DMap)**, we can formulate this as minimizing the distance between the transformed laser points and the nearest obstacles in the map.
+
+**Objective Function:**
+$$X^* = \text{argmin}_{X} \sum_{j} || d(X \cdot z_j) ||^2$$
+
+* $X$: The robot pose (what we want to estimate).
+* $z_j$: A laser scan point (endpoint) in the robot's local frame.
+* $X \cdot z_j$: The scan point transformed into the world frame.
+* $d(\cdot)$: The distance value from the Distance Map at that world coordinate.
+
+Essentially, we want to move the robot pose $X$ such that all laser points "land" on cells with zero distance (obstacles).
+
+
+
+---
+
+## 2. The Optimization Algorithm: Gauss-Newton
+
+Since the distance function is non-linear, we use an iterative Least Squares solver like **Gauss-Newton**.
+
+### The Concept
+We want to minimize the squared error term:
+$$X^* = \text{argmin}_{x} \sum_{i} ||e_i(X)||^2$$
+where the error $e_i(X) = d(X \cdot z_i)$.
+
+We approximate the error function around the current estimate using a first-order Taylor expansion and iteratively compute a correction $\Delta X$.
+
+### The Jacobian
+The core of Gauss-Newton is the Jacobian Matrix $J$, which tells us how the error changes as the pose changes.
+By applying the Chain Rule:
+$$\frac{\partial d(X \cdot z_j)}{\partial X} = \underbrace{\frac{\partial d(p)}{\partial p}}_{\text{Map Gradient}} \cdot \underbrace{\frac{\partial (X \cdot z_j)}{\partial X}}_{\text{Geometric Jacobian}}$$
+
+1.  **Map Gradient ($\nabla D$):** How the distance changes as we move in $x, y$ on the map. This is pre-computed in the Distance Map.
+2.  **Geometric Jacobian:** How the point's world coordinates change as the robot moves/rotates.
+
+### The Algorithm Step
+1.  **Initialize:** $H = 0$, $b = 0$.
+2.  **Accumulate:** For each scan point $z_j$:
+    * Compute world point $p = X \cdot z_j$.
+    * Lookup distance error $e = D(p)$.
+    * Lookup gradient $J_{map} = \nabla D(p)$.
+    * Compute full Jacobian $J = J_{map} \cdot J_{geom}$.
+    * Update Information Matrix: $H += J^T J$.
+    * Update Error Vector: $b += J^T e$.
+3.  **Solve:** $\Delta X = -H^{-1} b$.
+4.  **Update:** $X \leftarrow X + \Delta X$.
+5.  **Repeat:** Until convergence.
+
+---
+
+## 3. ROS Implementation Strategy
+
+A robust localizer integrates Odometry (prediction) and Scan Matching (correction).
+
+### Workflow
+1.  **Initialization:** The algorithm starts with an initial guess (e.g., from a message on `/initial_pose`).
+2.  **Odometry Update (Prediction):**
+    * When an `/odom` message arrives, calculate the relative motion $U$ since the last step.
+    * $U = Odom_{t-1}^{-1} \cdot Odom_t$.
+    * Update estimate: $X \leftarrow X \cdot U$.
+3.  **Scan Update (Correction):**
+    * When a `/scan` message arrives, compute endpoints in the robot frame.
+    * $x_i = r_i \cos(\theta_i), \quad y_i = r_i \sin(\theta_i)$.
+    * Run Gauss-Newton registration to refine $X$.
+
+### TF Publishing (The Transform Tree)
+Standard ROS navigation requires a single connected TF tree.
+* **Static:** `Map` frame.
+* **Drifting:** `Odom` frame (continuous but inaccurate).
+* **Robot:** `Base_Link` frame.
+
+**The Rule:** The robot hardware/drivers publish `Odom -> Base_Link`. The Localizer **must** publish `Map -> Odom` to correct the drift. It should **not** publish `Map -> Base_Link` directly, or the tree will break.
+
+**Calculation:**
+We have the estimated pose $T_{localizer}$ (Map $\to$ Base) and the raw odometry $T_{odom}$ (Odom $\to$ Base).
+We need to find the correction transform $T_{correction}$ (Map $\to$ Odom).
+
+$$T_{localizer} = T_{correction} \cdot T_{odom}$$
+$$\Rightarrow T_{correction} = T_{localizer} \cdot T_{odom}^{-1}$$
