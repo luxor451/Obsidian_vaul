@@ -7,7 +7,7 @@
 
 ## 1. Introduction to Intrusion Detection
 
-In the modern landscape of cybersecurity, shielding mechanisms like firewalls and VPNs are no longer sufficient to guarantee 100% protection. The rise of new attack techniques, "silent" vulnerabilities, misconfigurations, and malicious insiders necessitates a proactive approach. Security must involve continuous monitoring to detect unauthorized activities.
+In the modern landscape of cybersecurity, shielding mechanisms like [[16 Firewalls|firewalls]] and VPNs are no longer sufficient to guarantee 100% protection. The rise of new attack techniques, "silent" vulnerabilities, misconfigurations, and malicious insiders necessitates a proactive approach. Security must involve continuous monitoring to detect unauthorized activities.
 
 **Intrusion Detection** is defined by NIST as the process of monitoring events occurring in a computer system or network and analyzing them for signs of intrusions. An intrusion is defined as an attempt to compromise the confidentiality, integrity, or availability of a resource, or to bypass the security mechanisms of a computer or network.
 
@@ -152,7 +152,7 @@ Segmentation divides the network into isolated protection domains to limit later
     
 2.  **Logical Segmentation (VLANs):**
     * Software-defined boundaries using Layer 2 switches (802.1Q).
-    * **VLANs (Virtual Local Area Networks):** Logically multiplex broadcast domains on shared infrastructure. Traffic between VLANs must pass through a Layer 3 device (Router/Firewall) where ACLs can be applied.
+    * **VLANs (Virtual Local Area Networks):** Logically multiplex broadcast domains on shared infrastructure. Traffic between VLANs must pass through a Layer 3 device (Router/[[16 Firewalls|Firewall]]) where ACLs can be applied.
     * *Pros:* Flexible, dynamic.
     * *Cons:* Software vulnerabilities in switches can break isolation.
     
@@ -166,7 +166,7 @@ Segmentation divides the network into isolated protection domains to limit later
 
 ## 6. Security Information and Event Management (SIEM)
 
-In a complex infrastructure with HIDS, NIDS, Firewalls, and Servers all generating logs, a unified view is required.
+In a complex infrastructure with HIDS, NIDS, [[16 Firewalls|Firewalls]], and Servers all generating logs, a unified view is required.
 
 **SIEM** is a management layer positioned above existing security controls. It collects, aggregates, and correlates low-level data to produce high-level actionable intelligence.
 

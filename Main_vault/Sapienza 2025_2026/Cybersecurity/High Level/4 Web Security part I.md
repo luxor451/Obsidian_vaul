@@ -76,7 +76,7 @@ Security relies on a **Defense in Depth** approach, layering multiple countermea
 #### Server-Side Defenses
 * **Input Validation:** The first line of defense. Sanitizing all user data.
 * **Prepared Statements:** The standard defense against SQL Injection.
-* **Web Application Firewalls (WAF):** Specialized firewalls that inspect HTTP traffic for attack signatures.
+* **Web Application Firewalls (WAF):** Specialized [[16 Firewalls|firewalls]] that inspect HTTP traffic for attack signatures.
 * **[[5 Web Security part II#5. Cross-Site Request Forgery (CSRF)|CSRF Tokens]]:** Random values used to verify that a request originated from a legitimate form.
 
 #### Hybrid/Protocol Defenses
@@ -262,4 +262,4 @@ The application performs the request but does not return the response body to th
 ### 6.4 Prevention
 * **Allowlisting:** Strictly define which domains or IPs the server can contact (e.g., only `api.google.com`).
 * **Disable Unused Schemas:** Configure the HTTP client to support only `http` and `https`, explicitly disabling `file://`, `gopher://`, `ftp://`.
-* **[[Network Security#5.3 Network Segmentation|Network Segmentation]]:** Isolate web servers in a DMZ. Firewall rules should prevent the web server from initiating connections to the internal intranet or the cloud metadata service.
+* **[[Network Security#5.3 Network Segmentation|Network Segmentation]]:** Isolate web servers in a DMZ. [[16 Firewalls|Firewall]] rules should prevent the web server from initiating connections to the internal intranet or the cloud metadata service.

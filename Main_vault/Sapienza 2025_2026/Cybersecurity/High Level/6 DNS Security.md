@@ -107,7 +107,7 @@ DNS is ideal for **[[7 DoS Attacks#5.3 Reflection and Amplification|Reflective D
 * **Amplification Factor:** 50x to 70x. A 1 Gbps attack stream becomes 50 Gbps hitting the victim.
 
 ### 4.2 DNS Tunneling
-Firewalls often block arbitrary TCP/UDP traffic but allow DNS queries (port 53) to pass through. Attackers exploit this to create a covert communication channel (Command & Control or Data Exfiltration).
+[[16 Firewalls|Firewalls]] often block arbitrary TCP/UDP traffic but allow DNS queries (port 53) to pass through. Attackers exploit this to create a covert communication channel (Command & Control or Data Exfiltration).
 * **Encoding:** Data is encoded into the hostname.
     * *Query:* `secret-password-data.evil.com`.
     * *Routing:* The query is forwarded hierarchically until it reaches the attacker's Authoritative Server for `evil.com`.

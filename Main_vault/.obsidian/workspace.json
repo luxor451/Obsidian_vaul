@@ -4,17 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "3726f1dfe74d0506",
+        "id": "3acb32a240325b6b",
         "type": "tabs",
         "children": [
           {
-            "id": "1d025011e09b5063",
+            "id": "2564f46335afadeb",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Sapienza 2025_2026/Robot Programming/Navigation.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Navigation"
+            }
+          }
+        ]
+      },
+      {
+        "id": "88040f37fda56821",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8c5874f56772244d",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Sapienza 2025_2026/Robot Programming/Slides/rp_08a_navigation.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "rp_08a_navigation"
             }
           }
         ]
@@ -74,7 +96,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419
+    "width": 419,
+    "collapsed": true
   },
   "right": {
     "id": "12259ed952230c96",
@@ -90,12 +113,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Sapienza 2025_2026/High Performance Computing/Images/Pasted image 20260126173615.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Pasted image 20260126173615"
             }
           }
         ]
@@ -110,6 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Sapienza 2025_2026/High Performance Computing/Images/Pasted image 20260126173615.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +144,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Pasted image 20260126173615"
             }
           },
           {
@@ -128,11 +153,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Sapienza 2025_2026/High Performance Computing/Images/Pasted image 20260126173615.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Pasted image 20260126173615"
             }
           },
           {
@@ -151,7 +177,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -169,53 +195,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1d025011e09b5063",
+  "active": "2564f46335afadeb",
   "lastOpenFiles": [
-    "Sapienza 2025_2026/Robot Programming/Transform and sensors.md",
-    "Sapienza 2025_2026/Robot Programming/Compiler and build system.md",
-    "Sapienza 2025_2026/Robot Programming/Overview.md",
-    "Sapienza 2025_2026/Robot Programming/Eigen.md",
-    "Sapienza 2025_2026/Robot Programming/C++.md",
-    "Sapienza 2025_2026/Robot Programming/Slides/rp_02_cpp_intro.pdf",
-    "Sapienza 2025_2026/Robot Programming/Slides/rp_02b_cpp_inheritance.pdf",
-    "Sapienza 2025_2026/Robot Programming/Dmap.md",
-    "Sapienza 2025_2026/Robot Programming/Navigation.md",
-    "Sapienza 2025_2026/Robot Programming/Git.md",
-    "Sapienza 2025_2026/Robot Programming/ROS introduction.md",
-    "Sapienza 2025_2026/Robot Programming/Slides/rp_03_ROS_introduction.pdf",
-    "Sapienza 2025_2026/Robot Programming/Slides/rp_06_eigen_light.pdf",
-    "Sapienza 2025_2026/Robot Programming/Slides/rp_07_dmap.pdf",
     "Sapienza 2025_2026/Robot Programming/Slides/rp_08a_navigation.pdf",
-    "Sapienza 2025_2026/Robot Programming/Slides/rp_08b_dmap_localizaton.pdf",
-    "Sapienza 2025_2026/Robot Programming/Slides/rp_09_dmap_planning.pdf",
+    "Sapienza 2025_2026/Robot Programming/Overview.md",
+    "Sapienza 2025_2026/Robot Programming/Slides/rp_07_dmap.pdf",
+    "Sapienza 2025_2026/Robot Programming/Navigation.md",
+    "Sapienza 2025_2026/Robot Programming/Dmap.md",
+    "Sapienza 2025_2026/Robot Programming/ROS introduction.md",
+    "Sapienza 2025_2026/Robot Programming/Slides/rp_06_eigen_light.pdf",
+    "Sapienza 2025_2026/Robot Programming/Slides/rp_03_ROS_introduction.pdf",
+    "Sapienza 2025_2026/Robot Programming/C++.md",
     "Sapienza 2025_2026/Robot Programming/Slides/rp_11b_ROS2_robot_setup.pdf",
-    "Sapienza 2025_2026/Robot Programming/Slides/rp_03_cpp_metaprogramming.pdf",
-    "Sapienza 2025_2026/Robot Programming/Untitled.md",
-    "Sapienza 2025_2026/Robot Programming/dmap.md",
-    "Sapienza 2025_2026/Robot Programming/Images/Pasted image 20260126031601.png",
-    "Sapienza 2025_2026/Robot Programming/C++ cheatsheet.md",
-    "Sapienza 2025_2026/Robot Programming/Compilers, Make and Git.md",
-    "Stage/Parralélisation en Rust/Remarque Heptagon.md",
-    "Stage/Parralélisation en Rust/Remarque GRust.md",
-    "Stage/Parralélisation en Rust/Integration au Crazyflie.md",
-    "Stage/Parralélisation en Rust/Guide D'installation.md",
-    "Sapienza 2025_2026/Cryptography/4 Symmetric-key encryption.md",
-    "Sapienza 2025_2026/Cryptography/9 Identity-Based Encryption.md",
-    "Sapienza 2025_2026/Cryptography/8 Post-quantum cryptography.md",
-    "Sapienza 2025_2026/Cryptography/6 Public-key encryption.md",
-    "Sapienza 2025_2026/Cryptography/Images/Pasted image 20260126003650.png",
-    "Sapienza 2025_2026/Cryptography/9.md",
-    "Sapienza 2025_2026/Cryptography/7 Identification schemes.md",
-    "Sapienza 2025_2026/Cryptography/Images/Pasted image 20260126011111.png",
-    "Sapienza 2025_2026/Cryptography/Images/Pasted image 20260126005835.png",
-    "Sapienza 2025_2026/Cryptography/Images/Pasted image 20260126005610.png",
-    "Sapienza 2025_2026/Cryptography/Images/Pasted image 20260126005434.png",
-    "Sapienza 2025_2026/Cryptography/Images/Pasted image 20260126005109.png",
-    "Sapienza 2025_2026/Cryptography/Images/Pasted image 20260126003832.png",
-    "Sapienza 2025_2026/Cryptography/Images/Pasted image 20260126003806.png",
-    "Sapienza 2025_2026/Cryptography/6 .md",
-    "Sapienza 2025_2026/Cryptography/5 Number theory in cryptography.md",
-    "Sapienza 2025_2026/Cryptography/Images/Pasted image 20260125171119.png",
+    "Sapienza 2025_2026/Robot Programming/Slides/rp_00_intro.pdf",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/16 Firewalls.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/15 TLS.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/16 ",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/14 PKI.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/15.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/13 Authentication based on public keys.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/12 Authentication based on passwords.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/11 Kerberos Authentication Protocol.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/10 Authentication.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/9 Overview on ELGamal and DSS.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/10 Authentication",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/10 ",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/8 Random Number Generators.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/7 Asymmetric encryption: the Diffie-Hellman intuition.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/8 Random Number Generators",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/6 Authenticated encryption.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/7.md",
+    "Sapienza 2025_2026/Cybersecurity/Images/Pasted image 20260127173249.png",
+    "Sapienza 2025_2026/Cybersecurity/Images/Pasted image 20260127181744.png",
+    "Sapienza 2025_2026/Cybersecurity/Images/Pasted image 20251210165923.png",
+    "Sapienza 2025_2026/Cybersecurity/Images/Pasted image 20260122185603.png",
+    "Sapienza 2025_2026/Cybersecurity/Images/2025-09-24-152345_hyprshot.png",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/5 Cryptographic hashing functions.md",
+    "Sapienza 2025_2026/Cybersecurity/Images/Pasted image 20260127192151.png",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/4 Authentication of messages and data integrity.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/3 Block ciphers.md",
+    "Sapienza 2025_2026/Cybersecurity/Images/Pasted image 20260127181933.png",
+    "Sapienza 2025_2026/Cybersecurity/Images/Pasted image 20260127181838.png",
+    "Sapienza 2025_2026/Cybersecurity/Images/Pasted image 20260127181829.png",
+    "Sapienza 2025_2026/Cybersecurity/Images/Pasted image 20260127181757.png",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/2 Stream ciphers.md",
+    "Sapienza 2025_2026/Cybersecurity/Low Level/0 Introduction.md",
+    "Sapienza 2025_2026/Cybersecurity/Overview.md",
+    "Sapienza 2025_2026/Cybersecurity/Slides/Untitled.md",
     "Untitled.canvas"
   ]
 }

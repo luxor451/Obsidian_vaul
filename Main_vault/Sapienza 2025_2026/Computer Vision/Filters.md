@@ -18,7 +18,9 @@ $$e_{procressed} = n \cdot e+ j \cdot a+ k \cdot b + l \cdot c + m \cdot d + o \
 ##### Equation Form
 ![[2025-10-09-134421_hyprshot.png]]
 $$g(x,y) = \sum ^{a}_{s=-a}\sum ^{b}_{t=-b} w(s,t)\cdot f(x+s,y+t)$$
-Filtering can be given in equation form as shown above
+Filtering can be given in equation form as shown above.
+> [!NOTE] Optimization
+> The above operation involves multiplying and adding many values, which is a perfect candidate for [[../High Performance Computing/Single Node/3 Vector instructions SMID|SIMD optimization]].
 
 ### Smoothing Spatial Filters
 One of the simplest spatial filtering operations we can perform is a smoothing operation

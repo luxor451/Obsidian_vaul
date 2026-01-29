@@ -115,11 +115,11 @@ Localization can be framed as an optimization problem where we want to find the 
 Using a **Distance Map (DMap)**, we can formulate this as minimizing the distance between the transformed laser points and the nearest obstacles in the map.
 
 **Objective Function:**
-$$X^* = \text{argmin}_{X} \sum_{j} || d(X \oplus z_j) ||^2$$
+$$X^* = \text{argmin}_{X} \sum_{j} || d(X \cdot z_j) ||^2$$
 
 * $X$: The robot pose (what we want to estimate).
 * $z_j$: A laser scan point (endpoint) in the robot's local frame.
-* $X \oplus z_j$: The scan point transformed into the world frame.
+* $X \cdot z_j$: The scan point transformed into the world frame.
 * $d(\cdot)$: The distance value from the Distance Map at that world coordinate.
 
 Essentially, we want to move the robot pose $X$ such that all laser points "land" on cells with zero distance (obstacles).

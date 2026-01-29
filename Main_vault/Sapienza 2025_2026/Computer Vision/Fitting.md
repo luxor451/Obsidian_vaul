@@ -233,6 +233,9 @@ e \\
 f
 \end{bmatrix} = 0$$
 
+> [!TIP] Implementation
+> In C++, linear systems like this are efficiently solved using the [[../Robot Programming/Eigen|Eigen Library]].
+
 ### Remarks
 Least square is robust to noise but not to outliers
 

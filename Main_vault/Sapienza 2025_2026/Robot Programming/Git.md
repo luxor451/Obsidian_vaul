@@ -52,7 +52,7 @@ Git projects consist of three main sections:
 
 
 ### Data Integrity (SHA-1)
-* Git uses a **SHA-1 hash** (a 40-character hexadecimal string) to identify everything.
+* Git uses a **[[../Cybersecurity/Low Level/Cryptographic Hash Function|SHA-1 hash]]** (a 40-character hexadecimal string) to identify everything.
 * **Integrity:** It is impossible to change the contents of any file or directory without Git knowing about it.
 * Commits are referred to by this hash (e.g., `24b9da6...`) rather than sequential numbers (v1, v2).
 
